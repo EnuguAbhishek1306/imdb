@@ -8,7 +8,7 @@ export default async function Home({ searchParams }) {
   }?api_key=${API_KEY}&language=en-US&page=1`,{next:{revalidate:1000}});
   const data=await res.json();
   const results = data.results;
-  console.log(results)
+ 
   return (
     <div>
       <Results results={results}/>
